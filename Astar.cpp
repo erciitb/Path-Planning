@@ -1,4 +1,4 @@
-// A C++ Program to implement A* Search Algorithm
+    /0/001 A         C++ Program to implement A* Search Algorithm
 #include <bits/stdc++.h>
 #include<simplecpp>
 using namespace std;
@@ -260,95 +260,17 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest, Rectangle rectArr[ROW][CO
 				}
 			}
 		}
+///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+//////     Fill in the blanks - (Code for the right node)
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
 
-		//----------- 2nd Successor (South) ------------
 
-		// Only process this cell if this is a valid one
-		if (isValid(i + 1, j) == true) {
-			// If the destination cell is the same as the
-			// current successor
-			if (isDestination(i + 1, j, dest) == true) {
-				// Set the Parent of the destination cell
-				cellDetails[i + 1][j].parent_i = i;
-				cellDetails[i + 1][j].parent_j = j;
-				printf("The destination cell is found\n");
-				tracePath(cellDetails, dest, rectArr);
-				foundDest = true;
-				return;
-			}
-			// If the successor is already on the closed
-			// list or if it is blocked, then ignore it.
-			// Else do the following
-			else if (closedList[i + 1][j] == false		// //----------- 8th Successor (South-West)
-		// //------------
-
-		// // Only process this cell if this is a valid one
-		// if (isValid(i + 1, j - 1) == true) {
-		// 	// If the destination cell is the same as the
-		// 	// current successor
-		// 	if (isDestination(i + 1, j - 1, dest) == true) {
-		// 		// Set the Parent of the destination cell
-		// 		cellDetails[i + 1][j - 1].parent_i = i;
-		// 		cellDetails[i + 1][j - 1].parent_j = j;
-		// 		printf("The destination cell is found\n");
-		// 		tracePath(cellDetails, dest);
-		// 		foundDest = true;
-		// 		return;
-		// 	}
-
-		// 	// If the successor is already on the closed
-		// 	// list or if it is blocked, then ignore it.
-		// 	// Else do the following
-		// 	else if (closedList[i + 1][j - 1] == false
-		// 			&& isUnBlocked(grid, i + 1, j - 1)
-		// 					== true) {
-		// 		gNew = cellDetails[i][j].g + 1.414;
-		// 		hNew = calculateHValue(i + 1, j - 1, dest);
-		// 		fNew = gNew + hNew;
-
-		// 		// If it isn’t on the open list, add it to
-		// 		// the open list. Make the current square
-		// 		// the parent of this square. Record the
-		// 		// f, g, and h costs of the square cell
-		// 		//			 OR
-		// 		// If it is on the open list already, check
-		// 		// to see if this path to that square is
-		// 		// better, using 'f' cost as the measure.
-		// 		if (cellDetails[i + 1][j - 1].f == FLT_MAX
-		// 			|| cellDetails[i + 1][j - 1].f > fNew) {
-		// 			openList.insert(make_pair(
-		// 				fNew, make_pair(i + 1, j - 1)));
-
-		// 			// Update the details of this cell
-		// 			cellDetails[i + 1][j - 1].f = fNew;
-		// 			cellDetails[i + 1][j - 1].g = gNew;
-		// 			cellDetails[i + 1][j - 1].h = hNew;
-		// 			cellDetails[i + 1][j - 1].parent_i = i;
-		// 			cellDetails[i + 1][j - 1].parent_j = j;
-		// 		}
-		// 	}
-		// }
-	//}
-
-	// When the destination cell is not found and the open
-	// list is empty, then we conclude that we failed to
-	// reach the destination cell. This may happen when the
-	// there is no way to destination cell (due to
-	// blockages)
-					&& isUnBlocked(grid, i + 1, j)
-							== true) {
-				gNew = cellDetails[i][j].g + 1.0;
-				hNew = calculateHValue(i + 1, j, dest);
-				fNew = gNew + hNew;
-
-				// If it isn’t on the open list, add it to
-				// the open list. Make the current square
-				// the parent of this square. Record the
-				// f, g, and h costs of the square cell
-				//			 OR
-				// If it is on the open list already, check
-				// to see if this path to that square is
-				// better, using 'f' cost as the measure.
 				if (cellDetails[i + 1][j].f == FLT_MAX
 					|| cellDetails[i + 1][j].f > fNew) {
 					openList.insert(make_pair(
